@@ -1,0 +1,52 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+ Scanner sc = new Scanner(System.in);
+
+        double salario = sc.nextDouble();
+        double salarioReajustado = 0;
+        double reajuste = 0;
+
+        if (salario <= 400) {
+            salarioReajustado = salario + (salario * 0.15);
+            reajuste = salario * 0.15f;
+            System.out.printf("Novo salario: %.2f\n", salarioReajustado);
+            System.out.printf("Reajuste ganho: %.2f\n", reajuste);
+            System.out.println("Em percentual: 15 %");
+
+        } else if (salario > 400 && salario <= 800) {
+            salarioReajustado = salario + (salario * 0.12);
+            reajuste = salario * 0.12f;
+            System.out.printf("Novo salario: %.2f\n", salarioReajustado);
+            System.out.printf("Reajuste ganho: %.2f\n", reajuste);
+            System.out.println("Em percentual: 12 %");
+
+        }else if (salario > 800 && salario <= 1200) {
+            salarioReajustado = salario + (salario * 0.10);
+            reajuste = salario * 0.10f;
+            System.out.printf("Novo salario: %.2f\n", salarioReajustado);
+            System.out.printf("Reajuste ganho: %.2f\n", reajuste);
+            System.out.println("Em percentual: 10 %");
+            
+        }else if (salario > 1200 && salario <= 2000) {
+            salarioReajustado = salario + (salario * 0.07);
+            reajuste = salario * 0.07f;
+            System.out.printf("Novo salario: %.2f\n", salarioReajustado);
+            System.out.printf("Reajuste ganho: %.2f\n", reajuste);
+            System.out.println("Em percentual: 7 %");
+        }else{
+            salarioReajustado = salario + (salario * 0.04);
+            reajuste = salario * 0.04f;
+            System.out.printf("Novo salario: %.2f\n", salarioReajustado);
+            System.out.printf("Reajuste ganho: %.2f\n", reajuste);
+            System.out.println("Em percentual: 4 %");              
+        }
+
+ 
+    }
+ 
+}
